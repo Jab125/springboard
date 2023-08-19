@@ -1,0 +1,32 @@
+[16:57:01] [ERROR] [FabricLoader/]: Uncaught exception in thread "Thread-1"
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at springboard.plugin.SpringboardPlugin.lambda$onLoad$1(SpringboardPlugin.java:37)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at springboard.plugin.SpringboardPlugin.lambda$onLoad$1(SpringboardPlugin.java:35)
+	... 1 more
+Caused by: java.lang.RuntimeException: java.lang.ExceptionInInitializerError
+	at springboard.Springboard.main(Springboard.java:53)
+	... 6 more
+Caused by: java.lang.ExceptionInInitializerError
+	at net.fabricmc.loader.impl.launch.knot.Knot.findEmbedddedGameProvider(Knot.java:224)
+	at net.fabricmc.loader.impl.launch.knot.Knot.createGameProvider(Knot.java:173)
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:130)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+	at springboard.Springboard.main(Springboard.java:51)
+	... 6 more
+Caused by: java.nio.file.FileSystemNotFoundException
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.getFileSystem(ZipFileSystemProvider.java:156)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.getPath(ZipFileSystemProvider.java:142)
+	at java.base/java.nio.file.Path.of(Path.java:208)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at net.fabricmc.loader.impl.util.UrlUtil.asPath(UrlUtil.java:54)
+	at net.fabricmc.loader.impl.util.UrlUtil.getCodeSource(UrlUtil.java:72)
+	at net.fabricmc.loader.impl.util.UrlUtil.<clinit>(UrlUtil.java:30)
+	... 13 more

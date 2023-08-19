@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "springboard",
+	"version": "${version}",
+	"name": "Springboard",
+	"description": "A launch plugin that allows fabric loader to be directly transformed.",
+	"authors": [
+		"Jab125"
+	],
+	"contact": {
+		"discord": "jab125"
+	},
+	"license": "LGPL-2.1-only",
+	"icon": "assets/springboard/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"springboard.ExampleMod"
+		],
+		"springboard:mod-suggestor": [
+			"springboard.impl.ModMenuSuggester"
+		]
+	},
+	"languageAdapters": {
+		"springboard-jashdkasdkash": "springboard.plugin.SpringboardLanguageAdapter"
+	},
+	"mixins": [
+		"springboard.mixins.json",
+		"springboard-plugin.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"java": ">=16"
+	}
+}
